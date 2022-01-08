@@ -1,0 +1,257 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+  /* overflow: auto; */
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #424242;
+  position: relative;
+  min-width: 212px;
+  max-width: 212px;
+  color: #fff;
+  transition: all 0.3s;
+  height:100%;
+  /* height:-webkit-fill-available; */
+
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding:0;
+    /* border-bottom: 1px solid #47748b; */
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 3px;
+    font-size: 12px;
+    display: block;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ ul.CTAs {
+    padding: 5px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+
+  #sidebar .brand {
+    background-color: #23282e;
+    line-height: 50px;
+    /* display: flex; */
+    text-align: center;
+    font-size: 14px;
+  }
+  #sidebar ul,
+  #sidebar li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 35px;
+    cursor: pointer;
+  } 
+  .arrow.fa-chevron-right{
+    /* display: inline-block; */
+    padding-left:60px;
+    padding-right: 10px;
+    vertical-align: middle;
+    float:right;
+    }
+    #sidebar ul :not(collapsed) .arrow:before,
+    #sidebar li :not(collapsed) .arrow:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      padding-left: 50px;
+      /* padding-right: 10px; */
+      vertical-align: middle;
+    }
+    #sidebar ul .active
+    {
+      border-left: 3px solid #f7564d;
+      background-color: #424242;
+      color:#f7564d;
+    }
+    #sidebar ul .active,
+    #sidebar li .active,
+    #sidebar li a span .active {
+      color:#f7564d;
+    }
+    
+#sidebar ul .sub-menu li.active,
+#sidebar li .sub-menu li.active {
+  color:#f7564d;
+}
+#sidebar ul .sub-menu li.active a,
+#sidebar li .sub-menu li.active a {
+  color:#f7564d;
+  background-color: #f7564d;
+}
+#sidebar ul .sub-menu li,
+#sidebar li .sub-menu li {
+  background-color: #313131;
+  line-height: 28px;
+  border-bottom: 1px solid #323232;
+  /* margin-bottom: 5px; */
+}
+#sidebar ul .sub-menu li:hover,
+#sidebar li .sub-menu li:hover {
+  background-color: #020203;
+}
+
+#sidebar li {
+  padding-left: 7px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid #23282e;
+  padding-bottom: 7px;
+  padding-top: 7px;
+
+}
+
+#sidebar li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding:20px;
+  }
+  #sidebar li a i {
+    padding-left: 50px;
+    padding-right:20px;
+    width: 20px;
+  }
+  #sidebar li:hover {
+    border-left: 3px solid #f7564d;
+    background-color: #4f5b69;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  @media (max-width: 767px) {
+    #sidebar {
+      position: relative;
+      width: 100%;
+      margin-bottom: 10px;
+    }}
+
+    #sidebar .toggle-btn {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10 !important;
+      padding: 3px;
+      background-color: #ffffff;
+      color: #000;
+      width: 40px;
+      text-align: center;
+    }
+    .submenu{
+        border: none;
+        background-color: dimgrey
+    }
